@@ -1,0 +1,7 @@
+{
+  "name": "reservation_app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue-vite"
+}
