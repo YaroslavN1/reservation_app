@@ -9,7 +9,7 @@
     "preview": "vite preview",
     "test:e2e": "cypress run",
     "test:unit": "vitest",
-    "lint": "eslint ."
+    "lint": "npx prettier . --write"
   },
   "dependencies": {
     "@capacitor/app": "5.0.6",
