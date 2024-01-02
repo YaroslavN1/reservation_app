@@ -25,7 +25,7 @@ import '@ionic/vue/css/display.css';
 import './theme/variables.css';
 
 const pinia = createPinia();
-const app = createApp(App).use(IonicVue).use(pinia).use(router);
+const app = createApp(App).use(pinia).use(router).use(IonicVue);
 
 router.isReady().then(() => {
   app.mount('#app');
