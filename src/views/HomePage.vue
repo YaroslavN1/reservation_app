@@ -9,7 +9,9 @@
     <ion-content :fullscreen="true">
       <ion-header collapse="condense">
         <ion-toolbar>
-          <ion-title size="large">Blank</ion-title>
+          <ion-title size="large">{{
+            isLoggedIn ? 'Logged in' : 'Log in'
+          }}</ion-title>
         </ion-toolbar>
       </ion-header>
 
@@ -37,6 +39,11 @@ import {
   IonTitle,
   IonToolbar,
 } from '@ionic/vue';
+
+import { useAuthStore } from '../stores/authStore';
+import { storeToRefs } from 'pinia';
+
+const { isLoggedIn } = storeToRefs(useAuthStore());
 </script>
 
 <style scoped>

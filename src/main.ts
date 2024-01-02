@@ -1,4 +1,5 @@
 import { createApp } from 'vue';
+import { createPinia } from 'pinia';
 import App from './App.vue';
 import router from './router';
 
@@ -23,7 +24,8 @@ import '@ionic/vue/css/display.css';
 /* Theme variables */
 import './theme/variables.css';
 
-const app = createApp(App).use(IonicVue).use(router);
+const pinia = createPinia();
+const app = createApp(App).use(IonicVue).use(pinia).use(router);
 
 router.isReady().then(() => {
   app.mount('#app');
